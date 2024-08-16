@@ -1,6 +1,13 @@
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
+    var button = document.querySelector('button');
     var buttonContainer = document.getElementById('button-container');
-    buttonContainer.addEventListener('click', function() {
+
+    button.addEventListener('click', function (event) {
+        alert('Hola!');
+        event.stopPropagation();
+    });
+
+    buttonContainer.addEventListener('click', function () {
         alert('Hola! Soy el div');
     });
 });
